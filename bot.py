@@ -181,7 +181,7 @@ class ModmailBot(commands.Bot):
         message = self.config.get('activity_message')
 
         if activity_type is not None and message:
-            url = self.config.get('twitch_url', 'https://www.twitch.tv/discord-modmail/') if activity_type == ActivityType.streaming else None
+            url = self.config.get('twitch_url', 'https://www.twitch.tv/shushia/') if activity_type == ActivityType.streaming else None
             activity = discord.Activity(type=activity_type, name=message,
                                         url=url)
             await self.change_presence(activity=activity)
